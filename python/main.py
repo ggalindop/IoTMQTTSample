@@ -34,7 +34,7 @@ mqtt_client.connect(host=IOT_HUB_NAME + ".azure-devices.net", port=8883, keepali
 mqtt_client.loop_start()
 
 # send telemetry
-messages = ["Accio", "Aguamenti", "Alarte Ascendare", "Expecto Patronum", "Homenum Revelio"]
+messages = ["Paco", "Paquita", "Alarte Ascendare", "Expecto Patronum", "Homenum Revelio"]
 for i in range(0, len(messages)):
     print("sending message[" + str(i) + "]: " + messages[i])
     mqtt_client.publish("devices/" + IOT_HUB_DEVICE_ID + "/messages/events/", payload=messages[i], qos=1)
